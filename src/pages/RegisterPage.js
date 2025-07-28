@@ -25,6 +25,8 @@ const RegisterPage = () => {
 
       const response = await api.post("/user", { name, email, password });
       if (response.status == 200) {
+        alert("로그인 성공!");
+        navigate("/");
       } else {
         setError(error.response.data.message);
       }
