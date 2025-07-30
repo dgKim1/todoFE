@@ -4,7 +4,7 @@ import api from "../utils/api";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-import useNavigate from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const TodoPage = ({ user, setUser }) => {
   const [todoList, setTodoList] = useState([]);
