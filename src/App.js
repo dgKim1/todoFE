@@ -28,12 +28,11 @@ function App() {
   }, []);
   return (
     <Routes>
-      <Route path="/" element={<TodoPage user={user} setUser={setUser} />} />
       <Route
-        path="/register"
+        path="/"
         element={
           <PrivateRoute user={user}>
-            <RegisterPage />
+            <TodoPage user={user} setUser={setUser} />
           </PrivateRoute>
         }
       />
