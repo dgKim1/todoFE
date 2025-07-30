@@ -36,6 +36,7 @@ function App() {
           </PrivateRoute>
         }
       />
+      <Route path="/register" element={<RegisterPage />} />
 
       <Route
         path="/login"
