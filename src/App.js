@@ -5,7 +5,7 @@ import LoginPage from "./pages/LoginPage";
 import TodoPage from "./pages/TodoPage";
 import RegisterPage from "./pages/RegisterPage";
 import PrivateRoute from "./route/PrivateRoute";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import api from "./utils/api";
 
 function App() {
@@ -22,6 +22,10 @@ function App() {
       setUser(null);
     }
   };
+
+  useEffect(() => {
+    getUser();
+  }, []);
   return (
     <Routes>
       <Route path="/" element={<TodoPage user={user} setUser={setUser} />} />
