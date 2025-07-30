@@ -24,7 +24,7 @@ function App() {
   };
   return (
     <Routes>
-      <Route path="/" element={<TodoPage />} />
+      <Route path="/" element={<TodoPage user={user} setUser={setUser} />} />
       <Route
         path="/register"
         element={
